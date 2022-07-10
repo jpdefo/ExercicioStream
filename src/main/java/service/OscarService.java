@@ -32,7 +32,7 @@ public class OscarService {
                                 Collectors.summingInt(OscarData::getAward))))
                 .entrySet().stream()
                 .max(Map.Entry.comparingByValue());
-        actorMostWins.ifPresent(c-> System.out.printf("O ator/atriz com mais estatuetas é %s com %d vitórias\n",c.getKey(),c.getValue()));
+        actorMostWins.ifPresent(c-> System.out.printf("O ator/atriz jovem(18-24 anos) com mais estatuetas é %s com %d vitórias\n",c.getKey(),c.getValue()));
     }
 
     public void mostWinsTotal(){
@@ -42,6 +42,6 @@ public class OscarService {
                                 Collectors.summingInt(OscarData::getAward)))
                 .entrySet().stream()
                 .max(Map.Entry.comparingByValue());
-        personMostWins.ifPresent(c-> System.out.printf("O ator/atriz jovem(18-24 anos) com mais estatuetas é %s com %d vitórias\n",c.getKey(),c.getValue()));
+        personMostWins.ifPresent(c-> System.out.printf("O ator/atriz com mais estatuetas é %s com %d vitórias\n",c.getKey(),c.getValue()));
     }
 }
